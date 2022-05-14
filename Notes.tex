@@ -1,0 +1,285 @@
+\documentclass[en, device=normal]{elegantnote}
+
+\usepackage[]{amssymb}
+
+\title{Introduction to high energy physics}
+
+\author{Grant}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\section{Quarks and leptons}
+
+\thispagestyle{empty}
+
+\subsection{Preamble}
+
+Nothing to say.
+
+\subsubsection{Why high energies?}
+
+Particle physics deals with the study of the elementary constituents of matter.
+We need to talk about "pointlike". It is a conception depends on the spatial resolution 
+of the probe used to investigate possible structure. The resolution is $\Delta r$ if 
+two points in an object can just be resolved as separate when they are a distance $\Delta r$ 
+apart.
+
+Assuming the probing beam itself consists of pointlike particles, the resolution is limited by 
+the de Broglie wavelength of these particles, which is $\lambda = h/p$ where $p$ is the 
+beam momentum and $h$ is Planck's constant. Thus beams of high momentum have short 
+wavelengths and can have high resolution.
+
+In an optical micro scope, the resolution is given by
+
+$$\Delta r\simeq\lambda/ \sin\theta$$
+
+where $\theta$ is the angular aperture of the light beam used to view the structure of 
+an object.
+
+Substituting the de Broglie relation, the resolution becomes 
+
+$$\Delta\simeq\frac{\lambda}{\sin\theta}=\frac{h}{p\sin\theta}$$
+
+so that $\Delta r$ is inversely proportional to the momentum transferred to the photons, 
+or other particles in an incident beam, when these are scattered by the target. Therefore, 
+the first reason is resolution.
+
+The second reason is that many of the elementary particles are extremely massive and the 
+energy required to create them is correspondingly large.
+
+\subsubsection{Units in high energy physics}
+
+\begin{table}[h]
+  \centering
+  \caption{Units in high energy physics(1)}
+    \begin{tabular}{lll}
+    \toprule
+    Quantity & High energy unit & Value in SI units \\
+    \midrule
+    length & $1fm$ & $10^{-15}m$ \\
+    energy & $1GeV=10^9eV$ & $1.602\times 19^{-10}J$ \\
+    mass, $E/c^2$ & $1GeV/c^2$ & $1.78\times 10^{-27}kg$ \\
+    $\hbar=h/(2\pi)$ & $6.588\times 10^{-25}GeV\cdot s$ & $1.055\times 10^{-34}J\cdot s$ \\
+    $c$ & $2.998\times 10^{23}fm\cdot s^{-1}$ & $2.998\times 10^8m\cdot s^{-1}$ \\
+    $\hbar c$ & $0.1975GeV\cdot fm$ & $3.162\times 10^{-26}J\cdot m$ \\
+    \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{table}[h]
+  \centering
+  \caption{Units in high energy physics(2)}
+  \begin{tabular}{ll}
+    \hline
+    \multicolumn{2}{l}{natural units, $\hbar=c=1$} \\
+    mass, $Mc^2/c^2$ & $1GeV$ \\
+    length, $\hbar c/(Mc^2)$ & $1GeV^{-1}=0.1975fm$ \\
+    time, $\hbar c/(Mc^3)$ & $1GeV^{-1}=6.59\times 10^{-25}s$ \\
+    \hline
+    \multicolumn{2}{l}{Heaviside-Lorentz units, $\epsilon_0=\mu_0=\hbar=c=1$} \\
+    fine structure constant & $\alpha=e^2/(4\pi)=1/137.06$ \\
+    \hline
+  \end{tabular}
+\end{table}
+
+In the SI system the unit electric charge, $e$, is measured in coulombs and the fine structure 
+constant is given by
+
+$$\alpha=\frac{e^2}{4\pi\epsilon_0\hbar c}\simeq\frac{1}{137}$$
+
+Here $\epsilon_0$ is the permittivity of free space, while its permeability is defined as $\mu_0$, 
+such that $\epsilon_0\mu_0=1/c^2$.
+
+For interaction in general, such units are not useful and we can define $e$ in Heaviside-Lorentz 
+units, which require $\epsilon_0=\mu_0=\hbar=c=1$, so that
+
+$$\alpha=\frac{e^2}{4\pi}\simeq\frac{1}{137}$$
+
+with similar definitions that relate charges and coupling constants analogous to $\alpha$ in 
+the other interactions.
+
+\subsubsection{Relativistic transformations}
+
+The relativistic relation between total energy $E$, the vector 3-momentum $\textbf{p}$(with Cartesian components $p_x,p_y,p_z$) 
+and the rest mass m for a free particle is 
+
+$$E^2=\textbf{p}^2c^2+m^2c^4$$
+
+or, in units with $c=1$
+
+$$E^2=\textbf{p}^2+m^2$$
+
+The components $p_x,p_y,p_z,E$ can be written as components of an energy-momentum 4-vector 
+$p_\mu$, where $\mu=1,2,3,4$. In the Minkowski convention, the three momentum(or space) components 
+are taken to be real and the energy (or time) component to be imaginary, as follows: 
+
+$$p_1=p_x,\quad p_2=p_y,\quad p_3=p_z,\quad p_4=iE$$
+
+so that 
+
+$$p^2=\sum_\mu p^2_\mu=\textbf{p}^2-E^2=-m^2$$
+
+Thus $p^2$ is a relativistic invariant. Its value is $-m^2$, where $m$ is the rest mass, 
+and clearly has the same value in all reference frames. If $E,\textbf{p}$ refer to the values measured in the lab 
+frame $\Sigma$ then those in another frame, say $\Sigma'$, moving along the $x$-axis with 
+velocity $\beta c$ are found from the Lorentz transformation, given in matrix form by 
+
+$$p_\mu'=\sum_{\nu=1}^4\alpha_{\mu\nu}p_\nu$$
+
+where
+
+$$\alpha_{\mu\nu}=
+\left\vert
+\begin{array}{cccc}
+\gamma & 0 & 0 & i\beta\gamma \\
+0 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0 \\
+-i\beta\gamma & 0 & 0 & \gamma \\
+\end{array}
+\right\vert$$
+
+and $\gamma=1/\sqrt{1-\beta^2}$. Thus 
+
+$$
+\begin{aligned}
+  p_1'&=\gamma p_1+i\beta\gamma p_4 \\
+  p_2'&=p_2 \\
+  p_3'&=p_3 \\
+  p_4'&=-i\beta\gamma p_1+\gamma p_4 \\
+\end{aligned}
+$$
+
+In terms of energy and momentum 
+
+$$\begin{aligned}
+  p'_x&=\gamma(p_x-\beta E) \\
+  p'_y&=p_y \\
+  p'_z&=p_z \\
+  E'&=\gamma(E-\beta p_x) \\
+\end{aligned}$$
+
+with $\textbf{p}'^2-E'^2=-m^2$.
+
+The above transformations apply equally to the space-time coordinates, making the 
+replacements $p_1\rightarrow x_1(=x),p_2\rightarrow x_2(=y),p_3\rightarrow x_3(=z),p_4\rightarrow x_4(=it)$.
+
+The 4-momentum squared above is an example of a Lorentz scalar, i.e. the invariant 
+scalar product of the two 4-vectors. Another example is the phase of a plane wave, 
+which determines whether it is at a crest or a trough and which must be the same for 
+all observers. With \textbf{k} and $\omega$ as the propagation vector and the angular 
+frequency, and in units $\hbar=c=1$
+
+$$phase=\textbf{k}\cdot\textbf{x}-\omega t=\textbf{p}\cdot\textbf{x}-Et=\sum p_\mu x_\mu$$
+
+The Minkowski notation used here for 4-vectors defines the metric, namely the square of 
+the 4-vector momentum $p=(\textbf{p},iE)$ so that 
+
+$$metric=(4-momentum)^2=(3-momentum)^2-(energy)^2$$
+
+In analogy with the space-time components, the components $p_{x,y,z}$ of 3-momentum 
+are said to be spacelike and the energy component $E$, timelike. Thus, if $q$ denotes 
+the 4-momentum transfer in a reaction, i.e. is $q=p-p'$ where $p,p'$ are the initial 
+and final 4-momenta, then $q^2>0$ means spacelike, otherwise, timelike.
+
+A different notation is used in texts on field theory. These avoid the use of the imaginary 
+fourth component and introduce the negative sign via the metric tensor $g_{\mu\nu}$. 
+The scalar product of 4-vectors A and B is then defined as 
+
+$$AB=g_{\mu\nu}A_\mu B_\nu=A_0B_0-\textbf{A}\cdot\textbf{B}$$
+
+where all the components are real. Here $\mu,\nu =0$ stand for the energy(time) component 
+and $\mu,\nu=1,2,3$ for the momentum(space) components, and 
+
+$$g_{00}=+1,\quad g_{11}=g_{22}=g_{33}=-1,\quad g_{\mu\nu}=0\ for\ \mu\neq\nu$$
+
+This metric results in Lorentz scalars with sign opposite to those using the Minkowski 
+convention, so that a spacelike(timelike) 4-momentum has $q^2<0$($q^2>0$) respectively.
+
+Sometimes, to avoid writing negative quantities, re-definitions have to be made. In deep 
+inelastic electron scattering, $q^2$ is spacelike and negative, and in discussing such 
+processes it has become common to define the positive quantity $Q^2=-q^2$.
+
+\subsubsection{Fixed-target and colliding beam accelerators}
+
+Consider the energy available for particle creation in fixed-target and in colliding-beam 
+accelerators.
+
+Suppose an incident particle of mass $m_A$, total energy $E_A$ and momentum $\textbf{p}_A$ 
+hits a target particle of mass $m_B$, energy $E_B$, momentum $\textbf{p}_B$. The total 
+4-momentum, squared, of the system is 
+
+$$p^2=(\textbf{p}_A+\textbf{p}_B)^2-(E_A+E_B)^2=-m_A^2-m_B^2+2\textbf{p}_A\cdot\textbf{p}_B-2E_AE_B$$
+
+The centre-of-momentum system(cms) is defined as the reference frame in which the total 
+3-momentum is zero. If the total energy in the cms is denoted $E^*$, then we also have $p^2=-E^{*2}$.
+
+Suppose first of all that the target particle is at rest in the laboratory(lab) system, so that $\textbf{p}_B=0$ 
+and $E_B=m_B$. Then 
+
+$$E^{*2}=-p^2=m_A^2+m_B^2+2m_BE_A$$
+
+Secondly, suppose that the incident and target particles travel in opposite directions. 
+Then, with $p_A$ and $p_B$ denoting the absolute values of the 3-momenta, the above 
+equation gives 
+
+$$E^{*2}=2(E_AE_B+p_Ap_B)+(m_A^2+m_B^2)\simeq 4E_AE_B$$
+
+if $$m_A,m_B\ll E_A,E_B$$. This result is for a head-on collision. For two beams crossing at an 
+angle $\theta$, the result would be $E^{*2}=2E_AE_B(1+\cos\theta)$.
+
+Note that the cms energy available for new particle creation in a collider with equal energies 
+$E$ in the two beams rises linearly with $E$, i.e. $E^*\simeq 2E$, while for a fixed-target 
+machine the cms energy rises as the square root of the incident energy, $E^*\simeq\sqrt{2m_BE_A}$. 
+Therefore, the highest possible energies for creating new particles are to be found at 
+colliding-beam accelerators.
+
+\subsection{The Standard Model of particle physics}
+
+\subsubsection{The fundamental fermions}
+
+\subsubsection{The interactions}
+
+\subsubsection{Limitations of the Standard Model}
+
+\subsection{Particle classification: fermions and bosons}
+
+\subsection{Particles and antiparticles}
+
+\subsection{Free particle wave equations}
+
+\subsection{Helicity states: helicity conservation}
+
+\subsection{Lepton flavours}
+
+\subsection{Quark flavours}
+
+\subsection{The cosmic connection}
+
+\subsubsection{Early work in cosmic rays}
+
+\subsubsection{Particle physics in cosmology}
+
+\section{Interactions and fields}
+
+\section{Invariance principles and conservation laws}
+
+\section{Quarks in hadrons}
+
+\section{Lepton and quark scattering}
+
+\section{Quark interactions and QCD}
+
+\section{Weak interactions}
+
+\section{Electroweak interactions and the Standard Model}
+
+\section{Physics beyond the Standard Model}
+
+\section{Particle physics and cosmology}
+
+\section{Experimental methods}
+
+\end{document}
